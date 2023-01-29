@@ -1,0 +1,2 @@
+/*1.- El ministerio de cultura desea realizar un estudio sobre la distribución del cine español en nuestro país y en las salas que han tenido más éxito. Obtener todas las salas que han emitido películas españolas en el período comprendido entre el 07 de enero del año 1995 y hoy, que han tenido más de 6000 espectadores.*/
+select cine,sala from sala where (cine,sala) in (select cine,sala from proyeccion where fecha_estreno between '07-01-1995' and curdate() and espectadores > 6000 and cip in (select cip from pelicula where nacionalidad like 'española'))  group by sala;

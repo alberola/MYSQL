@@ -1,0 +1,2 @@
+/*54.- Obtener los codcoche de los coches comprados en un concesionario de la misma ciudad que el cliente que lo compra. Comprobar el nombre de los clientes y los concesionarios son de la misma ciudad.*/
+select coches.codcoche from coches inner join ventas on coches.codcoche = ventas.codcoche inner join clientes on ventas.dni = clientes.dni inner join concesionario on ventas.cifc = concesionario.cifc and clientes.ciudad = concesionario.ciudad;

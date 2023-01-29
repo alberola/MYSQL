@@ -1,0 +1,2 @@
+/*12.- Aumentar en 5 coches a la cantidad en distribución de los concesionarios que tienen en stock coches con el código 6.*/
+select distinct cifc,codcoche,cantidad,cantidad+5 as 'Nueva cantidad' from distribucion where codcoche = 6;

@@ -1,0 +1,2 @@
+/*21. Obtener el dni de los clientes que han comprado algún coche a un concesionario de ´MADRID'*/
+select distinct dni from ventas where cifc in (select cifc from concesionario where ciudad like 'Madrid');
